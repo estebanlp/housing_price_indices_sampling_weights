@@ -1,4 +1,5 @@
 # spatial overlay listing data on census blocks
+library(data.table)
 library(chilemapas)
 library(sf)
 library(sp)
@@ -8,10 +9,10 @@ library(nngeo)
 hh<-fread("01 Data/base_toctoc.csv")
 hh<-hh[yearPublicacion==2017 & mesPublicacion==7,]
 # Quarterly
-hh <- hh[yearPublicacion==2017 & mesPublicacion==7, Tr:=1]
-hh <- hh[yearPublicacion==2017 & mesPublicacion==8, Tr:=1]
-hh <- hh[yearPublicacion==2017 & mesPublicacion==9, Tr:=1]
-hh <- hh[Tr==1,][,Tr:=NULL]
+#hh <- hh[yearPublicacion==2017 & mesPublicacion==7, Tr:=1]
+##hh <- hh[yearPublicacion==2017 & mesPublicacion==8, Tr:=1]
+#hh <- hh[yearPublicacion==2017 & mesPublicacion==9, Tr:=1]
+#hh <- hh[Tr==1,][,Tr:=NULL]
 
 coms<-codigos_territoriales[codigos_territoriales$codigo_provincia %in% 131 | codigos_territoriales$codigo_comuna %in% c(13201,13401),]$codigo_comuna
 
@@ -50,8 +51,8 @@ for(i in coms){
   }
 }
 
-#fwrite(HH,file = "01 Data/01_Comuna/Houses_controlDB.csv")
-fwrite(HH,file = "01 Data/01_Comuna/Houses_controlDB_Q.csv")
+fwrite(HH,file = "01 Data/01_Comuna/Houses_controlDB.csv")
+#fwrite(HH,file = "01 Data/01_Comuna/Houses_controlDB_Q.csv")
 
 
 #loop for appartments
@@ -89,5 +90,5 @@ for(i in coms){
   }
 }
 
-#fwrite(AA,file = "01 Data/01_Comuna/Apts_controlDB.csv")
-fwrite(AA,file = "01 Data/01_Comuna/Apts_controlDB_Q.csv")
+fwrite(AA,file = "01 Data/01_Comuna/Apts_controlDB.csv")
+#fwrite(AA,file = "01 Data/01_Comuna/Apts_controlDB_Q.csv")

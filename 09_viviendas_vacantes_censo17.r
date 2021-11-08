@@ -5,16 +5,16 @@ library(dbplyr)
 library(ggplot2)
 library(tidyverse)
 
-censo_descargar_base()
+censo_descargar()
 
-viviendas_vacantes_rm<- tbl(censo_bbdd(), "zonas") %>%
+viviendas_vacantes_rm<- tbl(censo_conectar(), "zonas") %>%
   mutate(
       region = substr(as.character(geocodigo),1,2),
       comuna = substr(as.character(geocodigo),1,5)
   ) %>%
   filter(region=="13")%>%
   select(comuna,geocodigo,zonaloc_ref_id)%>%
-  inner_join(select(tbl(censo_bbdd(),"viviendas"),zonaloc_ref_id,vivienda_ref_id,p01,p02),by='zonaloc_ref_id')%>%
+  inner_join(select(tbl(censo_conectar(),"viviendas"),zonaloc_ref_id,vivienda_ref_id,p01,p02),by='zonaloc_ref_id')%>%
   collect()
 
 viviendas_vacantes_rm<- viviendas_vacantes_rm%>%
