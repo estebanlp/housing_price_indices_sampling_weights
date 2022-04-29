@@ -9,7 +9,6 @@ set more off
 
 ** Global paths: Data and Do-files
 
-global path "/Users/estebanlopezochoa/Dropbox/Documents/003 Research/02 Housing Prices and Sampling Weights/01 Repositories/housing_price_indices_sampling_weights/"
 *global path "/Users/magdalena/Dropbox/CEPR/02 Housing Price Indices/"
 global pathData "${path}01 Data/"
 global pathDo "${path}03 Scripts/Stata/"

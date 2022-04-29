@@ -123,8 +123,4 @@ ggplot(dif_1[!is.na(`Delta type`),.(`Total delta`=sum(abs(diff))),by=.(sale,`Del
   theme(legend.title = element_blank())
 
 
-#falta hacer
-# 1. grafico de los indices de con y sin expansor para grupos de comunas
-# 2. grafico de delta comparativo por grupos de comunas
-# 3. grafico comparativo de los tipos de expansor por grupos de comunas y su elta (se espera q sean mas grandes en las comunas con menos datos)
 

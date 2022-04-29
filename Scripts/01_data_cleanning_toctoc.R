@@ -6,8 +6,6 @@ library(chilemapas)
 library(foreign)
 library(ggplot2)
 
-#pathD<-"/Users/estebanlopezochoa/Dropbox/Documents/006 Library/01 Chile/TocToc/BDPublicacionesTOCTOC/"
-#pathD <-"/Users/magdalena/Dropbox/CEPR/TocToc/BDPublicacionesTOCTOC/" 
 pathD <- "C:/Users/smw634/Dropbox/Documents/006 Library/01 Chile/TocToc/BDPublicacionesTOCTOC/"
 files<-dir(pathD)[grepl("data",dir(pathD))]
 

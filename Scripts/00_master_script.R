@@ -1,7 +1,5 @@
 #########################################################
 #   Master script: HPIs sampling weights paper
-#   Author: Esteban Lopez Ochoa, PhD.
-#   Inst: The University of Texas at San Antonio
 #########################################################
 
 p_list<-c("data.table", "chilemapas", "tidyverse","censo2017","foreign")

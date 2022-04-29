@@ -1,7 +1,5 @@
 #########################################################
 #  Part 3.1: Sampling weights - Frequency based
-#   Author: Esteban Lopez Ochoa, PhD.
-#   Inst: The University of Texas at San Antonio
 #########################################################
 
 

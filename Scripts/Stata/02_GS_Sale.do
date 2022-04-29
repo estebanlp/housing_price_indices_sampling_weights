@@ -1,7 +1,6 @@
 clear all
 set more off
 
-*global path "/Users/estebanlopezochoa/Dropbox/Documents/003 Research/02 Housing Price Indices/"
 *global path "/Users/magdalena/Dropbox/02 Housing Price Indices/"
 global pathData "${path}01 Data/02_GS/"
 global pathRes "${path}04 Results/02_GS/Sale/"

@@ -1,7 +1,5 @@
 #########################################################
 #  Part 2.1: Assembling Census data - Frequency -based sampling weights
-#   Author: Esteban Lopez Ochoa, PhD.
-#   Inst: The University of Texas at San Antonio
 #########################################################
 
 
